@@ -75,12 +75,22 @@ namespace SingleResponsibilityPrinciple
                 return false;
             }
 
+            if(tradeAmount < 1000 || tradeAmount > 100000)
+            {
+                LogMessage("WARN", " Trade price on line {0} not a valid decimal: '{1}'", currentLine, fields[2]);
+                return false;
+            }
+
             return true;
         }
 
         private void LogMessage(string msgType, string message, params object[] args)
         {
             Console.WriteLine(msgType+ " :" +message, args);
+            using (StreamWriter logfile = File.AppendText("log.xml"))
+            {
+                logfile.WriteLine("<log><type>" + msgType + "</type><message>" + message + "</message></log> ", args);
+            }
         }
 
         private TradeRecord MapTradeDataToTradeRecord(string[] fields)

@@ -1,2 +1,9 @@
 <log><type>INFO</type><message>  Connecting to Database</message></log> 
 <log><type>INFO</type><message>  4 trades processed</message></log> 
+<log><type>INFO</type><message>  Connecting to Database</message></log> 
+<log><type>INFO</type><message>  4 trades processed</message></log> 
+<log><type>WARN</type><message> Trade price on line 1 not a valid decimal: '1.51'</message></log> 
+<log><type>INFO</type><message>  Connecting to Database</message></log> 
+<log><type>INFO</type><message>  3 trades processed</message></log> 
+<log><type>INFO</type><message>  Connecting to Database</message></log> 
+<log><type>INFO</type><message>  4 trades processed</message></log> 
